@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import APIKey from "../../../Key/APIKey";
+import { Container } from "./style";
 
 function Details() {
 
 const { id } = useParams()
 
-const { movie, setMovie } = useState([])
+const [movie, setMovie] = useState([])
 const imgURL = "https://image.tmdb.org/t/p/w500/"
 
 
@@ -24,14 +25,23 @@ useEffect(() => {
       image: `${imgURL}${poster_path}`,
       releaseDate: release_date
     }
-    console.log(movie)
-    setMovie
+    setMovie(movie)
   })
 },[id])
 
   return (
-  <h1>Helo World</h1>
-  )
+    <Container>
+      <div className="movie">
+        <img src={movie.image} alt={movie.title} />
+        <div className="details">
+          <h1>{movie.title}</h1>
+          <span>Sinopse: {movie.sinopse}</span>
+          <span className="realease-Date">Release date: {movie.releaseDate}</span>
+          <Link to="/"><button>Go Back</button></Link>
+        </div>
+      </div>
+    </Container>
+    )
 }
 
 export default Details;
