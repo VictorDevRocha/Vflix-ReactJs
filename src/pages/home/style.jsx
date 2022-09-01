@@ -26,12 +26,14 @@ export const Movie = styled.li`
 
   img {
     width: 180px;
-    
+    border-radius: 1rem;
+    margin-bottom: 2rem;
   }
 
   span {
     font-weight: bold;
     font-size: 120%;
+    text-align: center;
   }
 
   a {
