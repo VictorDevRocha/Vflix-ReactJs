@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import APIKey from "../../../Key/APIKey";
-import { Container, Movie, MovieList } from "./style";
+import { Container, Movie, MovieList, Netfli } from "./style";
 import { Link } from "react-router-dom"
-import { Footer, Netfli } from "../common";
+import { Footer } from "../common";
+
 
 
 function Home() {
@@ -20,13 +21,22 @@ function Home() {
   return (
     <div>
       <Footer>
-        
         <footer>
           <Link to="/" className="Link"><p>V<span>Flix</span></p></Link>
         </footer>
       </Footer>
-      <Netfli></Netfli>
-      <Container>
+      <Netfli>
+        <div>
+          <h3>Filmes, séries e muito mais. Sem limites.</h3> 
+          <p>Assista onde quiser. Cancele quando quiser.</p>
+          <p className="label">Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.</p>
+          <div className="Input">
+            <input type="email" name="email" id="email" />
+            <button type="submit">Vamos lá</button>
+          </div>
+        </div>
+      </Netfli>
+      <Container> 
         <h1>Movies</h1>
         <MovieList>
           {movies.map(movie => {

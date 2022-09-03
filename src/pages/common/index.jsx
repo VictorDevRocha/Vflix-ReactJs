@@ -1,5 +1,4 @@
 import styled, { createGlobalStyle } from "styled-components";
-import netflix from "../../assets/netflix.png"
 
 export const GlobalElement = createGlobalStyle`
   * {
@@ -33,19 +32,10 @@ export const Footer = styled.div`
     color: white;
     font-size: 2.5rem;
     padding-left: 1.5rem;
+    font-weight: 700;
   }
 
   span {
     color: black;
   }
 `
-
-export const Netfli = styled.div`
-  background-image: url(${netflix});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: auto;
-  height: 90vh;
-  opacity: 50%;
-` 

@@ -1,12 +1,11 @@
 import styled from "styled-components"
+import netflix from "../../assets/netflix.png"
 
 export const Container = styled.div`
   h1 {
     text-align: center;
     margin: 4rem 0;
   }
-
-  
 `
 
 export const MovieList = styled.ul`
@@ -44,3 +43,67 @@ export const Movie = styled.li`
     transform: scale(1.1);
   }
 `
+
+export const Netfli = styled.div`
+  
+  background-image: url(${netflix});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: auto;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h3 {
+    font-size: 4rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    width: 70%;
+    font-weight: 500;
+  }
+
+  h2 {
+    font-size: 4rem;
+    padding-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 2rem;
+    padding-bottom: 1.9rem;
+  }
+
+  input {
+    padding: 19px;
+    width: 500px;
+    border: none;
+    font-size: 25px;
+  }
+
+  .label {
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .Input {
+    display: flex;
+    flex-direction: row;
+  }
+
+  button {
+    color: white;
+    background-color: red;
+    padding: 19px;
+    border: none;
+    width: 140px;
+    font-size: 25px;
+    font-weight: 400;
+  }
+` 
