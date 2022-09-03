@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  
+
+  margin-top: 5rem;
+
   h1 {
-    margin: 3rem 0;
+    margin: 1rem 0;
   }
 
   .movie {

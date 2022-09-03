@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom"
 import APIKey from "../../../Key/APIKey";
+import { Footer } from "../common";
 import { Container } from "./style";
 
 function Details() {
@@ -30,6 +31,12 @@ useEffect(() => {
 },[id])
 
   return (
+    <div>
+      <Footer>
+        <footer>
+          <Link to="/" className="Link"><p>V<span>Flix</span></p></Link>
+        </footer>
+      </Footer>
       <Container>
         <div className="movie">
           <img src={movie.image} alt={movie.title} />
@@ -41,6 +48,7 @@ useEffect(() => {
           </div>
         </div>
       </Container>
+    </div>
     )
 }
 

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import APIKey from "../../../Key/APIKey";
 import { Container, Movie, MovieList } from "./style";
 import { Link } from "react-router-dom"
+import { Footer } from "../common";
 
 function Home() {
 
@@ -16,6 +17,12 @@ function Home() {
   })
 
   return (
+    <div>
+      <Footer>
+        <footer>
+          <Link to="/" className="Link"><p>V<span>Flix</span></p></Link>
+        </footer>
+      </Footer>
       <Container>
         <h1>Movies</h1>
         <MovieList>
@@ -29,6 +36,7 @@ function Home() {
           })}
         </MovieList>
       </Container>
+    </div>
   )}
 
 export default Home;
