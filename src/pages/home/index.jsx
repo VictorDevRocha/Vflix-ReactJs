@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import APIKey from "../../../Key/APIKey";
 import { Container, Movie, MovieList } from "./style";
 import { Link } from "react-router-dom"
-import { Footer } from "../common";
+import { Footer, Netfli } from "../common";
+
 
 function Home() {
 
@@ -19,10 +20,12 @@ function Home() {
   return (
     <div>
       <Footer>
+        
         <footer>
           <Link to="/" className="Link"><p>V<span>Flix</span></p></Link>
         </footer>
       </Footer>
+      <Netfli></Netfli>
       <Container>
         <h1>Movies</h1>
         <MovieList>
