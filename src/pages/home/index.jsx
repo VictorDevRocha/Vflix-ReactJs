@@ -16,19 +16,19 @@ function Home() {
   })
 
   return (
-  <Container>
-    <h1>Movies</h1>
-    <MovieList>
-      {movies.map(movie => {
-        return (
-          <Movie key={movie.id}>
-            <Link to={`/details/${movie.id}`}><img src={`${imgURL}${movie.poster_path}`} alt={movie.title} /></Link>
-            <span>{movie.title}</span>
-          </Movie>
-        )
-      })}
-    </MovieList>
-  </Container>)
-}
+      <Container>
+        <h1>Movies</h1>
+        <MovieList>
+          {movies.map(movie => {
+            return (
+              <Movie key={movie.id}>
+                <Link to={`/details/${movie.id}`}><img src={`${imgURL}${movie.poster_path}`} alt={movie.title} /></Link>
+                <span>{movie.title}</span>
+              </Movie>
+            )
+          })}
+        </MovieList>
+      </Container>
+  )}
 
 export default Home;

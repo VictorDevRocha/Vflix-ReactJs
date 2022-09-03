@@ -30,17 +30,17 @@ useEffect(() => {
 },[id])
 
   return (
-    <Container>
-      <div className="movie">
-        <img src={movie.image} alt={movie.title} />
-        <div className="details">
-          <h1>{movie.title}</h1>
-          <span>Sinopse: {movie.sinopse}</span>
-          <span className="realease-Date">Release date: {movie.releaseDate}</span>
-          <Link to="/"><button>Go Back</button></Link>
+      <Container>
+        <div className="movie">
+          <img src={movie.image} alt={movie.title} />
+          <div className="details">
+            <h1>{movie.title}</h1>
+            <span>Sinopse: {movie.sinopse}</span>
+            <span className="realease-Date">Release date: {movie.releaseDate}</span>
+            <Link to="/"><button>Go Back</button></Link>
+          </div>
         </div>
-      </div>
-    </Container>
+      </Container>
     )
 }
 
