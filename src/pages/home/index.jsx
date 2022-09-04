@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
-import APIKey from "../../../Key/APIKey";
 import { Container, Movie, MovieList, Netfli } from "./style";
 import { Link } from "react-router-dom";
 import { Footer, Navbar } from "../common";
+
+const KEY = import.meta.env.VITE_SOME_KEY;
+
+console.log(KEY);
 
 function Home() {
   const imgURL = "https://image.tmdb.org/t/p/w500/";
@@ -11,7 +14,7 @@ function Home() {
 
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${APIKey}&language=en-US&page=1`
+      `https://api.themoviedb.org/3/movie/popular?api_key=${KEY}&language=en-US&page=1`
     )
       .then((response) => response.json())
       .then((data) => setMovies(data.results));
