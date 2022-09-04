@@ -51,4 +51,43 @@ export const Container = styled.div`
   .realease-Date {
     opacity: 0.5;
   }
+
+  @media(max-width: 1080px) {
+    .details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 1rem;
+    max-width: 70%;
+    }
+
+  }
+
+  @media(max-width: 700px) {
+    div {
+      flex-direction: column;
+    }
+
+    .details {
+      max-width: 80%;
+      align-items: center;
+      text-align: center;
+      margin-left: 0;
+    }
+
+    img {
+      width: 400px;
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media(max-width: 700px) {
+    img {
+      width: 300px;
+    }
+
+    .details {
+      max-width: 85%;
+    }
+  }
 `

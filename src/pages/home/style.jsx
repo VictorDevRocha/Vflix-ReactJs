@@ -50,7 +50,6 @@ export const Netfli = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: auto;
   height: 90vh;
   display: flex;
   justify-content: center;
@@ -59,20 +58,14 @@ export const Netfli = styled.div`
   div {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    text-align: center;
   }
   
   h3 {
     font-size: 4rem;
     padding-bottom: 0.5rem;
     text-align: center;
-    width: 70%;
     font-weight: 500;
-  }
-
-  h2 {
-    font-size: 4rem;
-    padding-bottom: 0.5rem;
   }
 
   p {
@@ -95,6 +88,7 @@ export const Netfli = styled.div`
   .Input {
     display: flex;
     flex-direction: row;
+    justify-content: center;
   }
 
   button {
@@ -105,5 +99,44 @@ export const Netfli = styled.div`
     width: 140px;
     font-size: 25px;
     font-weight: 400;
+  }
+
+  @media(max-width: 680px) {
+    input {
+      width: 350px;
+      font-size: 20px;
+    }
+
+    button {
+      font-size: 20px;
+    }
+  }
+
+  @media(max-width: 510px) {
+    input {
+      width: 275px;
+      font-size: 20px;
+    }
+
+    button {
+      width: 100px;
+      font-size: 20px;
+    }
+  }
+
+  @media(max-width: 410px) {
+    input {
+      width: 80%;
+      font-size: 20px;
+      margin-left: 10px;
+    }
+
+    button {
+      margin-right: 10px;
+    }
+
+    h3 {
+      font-size: 3rem;
+    }
   }
 ` 

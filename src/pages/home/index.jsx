@@ -27,11 +27,12 @@ function Home() {
       </Footer>
       <Netfli>
         <div>
-          <h3>Filmes, séries e muito mais. Sem limites.</h3> 
-          <p>Assista onde quiser. Cancele quando quiser.</p>
-          <p className="label">Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.</p>
+          <h3>Unlimited movies,</h3> 
+          <h3>TV shows, and more.</h3>
+          <p>Watch anywhere. Cancel anytime.</p>
+          <p className="label">Ready to watch? Enter your email to create or restart your membership.</p>
           <div className="Input">
-            <input type="email" name="email" id="email" />
+            <input type="email" name="email" id="email" placeholder="Email"/>
             <button type="submit">Vamos lá</button>
           </div>
         </div>
