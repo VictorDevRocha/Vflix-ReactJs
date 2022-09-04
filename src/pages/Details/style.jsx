@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-
   margin-top: 5rem;
 
   h1 {
     margin: 1rem 0;
+    font-size: 2.5rem;
   }
 
   .movie {
@@ -25,10 +25,11 @@ export const Container = styled.div`
     align-items: flex-start;
     margin-left: 4rem;
     max-width: 50%;
+    font-size: 1.2rem;
   }
 
   button {
-    background: #6654da;
+    background: red;
     border: none;
     cursor: pointer;
     border-radius: 1rem;
@@ -39,7 +40,7 @@ export const Container = styled.div`
   }
 
   button:hover {
-    background: #5848c2;
+    background: #860f0f;
   }
 
   span {
@@ -52,18 +53,17 @@ export const Container = styled.div`
     opacity: 0.5;
   }
 
-  @media(max-width: 1080px) {
+  @media (max-width: 1080px) {
     .details {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 1rem;
-    max-width: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 1rem;
+      max-width: 70%;
     }
-
   }
 
-  @media(max-width: 700px) {
+  @media (max-width: 700px) {
     div {
       flex-direction: column;
     }
@@ -81,7 +81,7 @@ export const Container = styled.div`
     }
   }
 
-  @media(max-width: 700px) {
+  @media (max-width: 700px) {
     img {
       width: 300px;
     }
@@ -90,4 +90,4 @@ export const Container = styled.div`
       max-width: 85%;
     }
   }
-`
+`;
