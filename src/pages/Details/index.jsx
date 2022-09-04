@@ -32,12 +32,17 @@ function Details() {
   return (
     <div>
       <Navbar>
-        <navbar>
+        <navbar className="navAjust">
           <Link to="/" className="Link">
             <p>
               V<span>Flix</span>
             </p>
           </Link>
+          <ul>
+            <li>
+              <button className="enter">Sign In</button>
+            </li>
+          </ul>
         </navbar>
       </Navbar>
       <Container>

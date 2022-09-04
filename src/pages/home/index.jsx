@@ -19,32 +19,39 @@ function Home() {
 
   return (
     <div>
-      <Navbar>
-        <navbar>
-          <Link to="/" className="Link">
-            <p>
-              V<span>Flix</span>
-            </p>
-          </Link>
-        </navbar>
-      </Navbar>
       <Netfli>
-        <div>
-          <h3>Unlimited movies,</h3>
-          <h3>TV shows, and more.</h3>
-          <p>Watch anywhere. Cancel anytime.</p>
-          <p className="label">
-            Ready to watch? Enter your email to create or restart your
-            membership.
-          </p>
-          <div className="Input">
-            <input type="email" name="email" id="email" placeholder="Email" />
-            <button type="submit">Vamos lá</button>
+        <Navbar>
+          <navbar className="navAjust">
+            <Link to="/" className="Link">
+              <p>
+                V<span>Flix</span>
+              </p>
+            </Link>
+            <ul>
+              <li>
+                <button className="enter">Sign In</button>
+              </li>
+            </ul>
+          </navbar>
+        </Navbar>
+        <div className="teste">
+          <div>
+            <h3>Unlimited movies,</h3>
+            <h3>TV shows, and more.</h3>
+            <p>Watch anywhere. Cancel anytime.</p>
+            <p className="label">
+              Ready to watch? Enter your email to create or restart your
+              membership.
+            </p>
+            <div className="Input">
+              <input type="email" name="email" id="email" placeholder="Email" />
+              <button type="submit">Get started</button>
+            </div>
           </div>
         </div>
       </Netfli>
       <Container>
-        <h1>Movies</h1>
+        <h1>Top 20 Movies Today</h1>
         <MovieList>
           {movies.map((movie) => {
             return (

@@ -14,28 +14,60 @@ export const GlobalElement = createGlobalStyle`
   }
 `;
 
-export const Navbar = styled.div`
-  navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: red;
-    padding: 15px;
-  }
+export const Navbar = styled.nav`
+  background-color: transparent;
+  padding: 20px;
+  padding-top: 30px;
+  user-select: none;
 
   .Link {
     text-decoration: none;
   }
 
-  p {
+  .navAjust {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      list-style-type: none;
+    }
+  }
+
+  .enter {
+    border: none;
+    padding: 8px 17px;
+    font-size: 1rem;
+    border-radius: 2px;
+    background-color: red;
     color: white;
-    font-size: 2.5rem;
-    padding-left: 1.5rem;
+    cursor: pointer;
+    margin-right: 3rem;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: 500;
+    transition: 50ms;
+  }
+
+  p {
+    color: red;
+    font-size: 3rem;
+    padding-left: 2rem;
     font-weight: 700;
   }
 
-  span {
-    color: black;
+  button:hover {
+    background-color: #860f0f;
+  }
+
+  @media (max-width: 510px) {
+    .enter {
+      margin-right: 1rem;
+    }
   }
 `;
 
