@@ -20,7 +20,7 @@ export const Footer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #ff1616dc;
+    background-color: red;
     padding: 15px;
   }
   

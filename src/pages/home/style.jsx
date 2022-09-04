@@ -78,6 +78,7 @@ export const Netfli = styled.div`
     width: 500px;
     border: none;
     font-size: 25px;
+    outline: none;
   }
 
   .label {
@@ -99,6 +100,12 @@ export const Netfli = styled.div`
     width: 140px;
     font-size: 25px;
     font-weight: 400;
+    transition: 150ms;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #860f0f;
   }
 
   @media(max-width: 680px) {
