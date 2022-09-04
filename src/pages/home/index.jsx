@@ -3,7 +3,7 @@ import { Container, Movie, MovieList, Netfli } from "./style";
 import { Link } from "react-router-dom";
 import { Footer, Navbar } from "../common";
 
-const KEY = process.env.VITE_SOME_KEY;
+const KEY = import.meta.env.VITE_SOME_KEY;
 
 function Home() {
   const imgURL = "https://image.tmdb.org/t/p/w500/";
