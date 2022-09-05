@@ -12,6 +12,17 @@ export const GlobalElement = createGlobalStyle`
     background-color: black;
     color: white;
   }
+
+  body::-webkit-scrollbar {
+  width: 12px;
+  border: 1px solid transparent;
+  background-color: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #860f0f;
+  border-radius: 2px;
+}
 `;
 
 export const Navbar = styled.nav`
