@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Footer, Navbar } from "../common";
@@ -12,12 +13,12 @@ function Details() {
   const imgURL = "https://image.tmdb.org/t/p/w500/";
 
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/${id}?api_key=${KEY}&language=en-US`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        const { title, poster_path, overview, release_date } = data;
+    axios
+      .get(
+        `https://api.themoviedb.org/3/movie/${id}?api_key=${KEY}&language=en-US`
+      )
+      .then((response) => {
+        const { title, poster_path, overview, release_date } = response.data;
 
         const movie = {
           id,

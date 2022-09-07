@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Container, Movie, MovieList, Netfli } from "./style";
 import { Link } from "react-router-dom";
 import { Footer, Navbar } from "../common";
+import axios from "axios";
 
 const KEY = import.meta.env.VITE_SOME_KEY;
 
@@ -11,11 +12,11 @@ function Home() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${KEY}&language=en-US&page=1`
-    )
-      .then((response) => response.json())
-      .then((data) => setMovies(data.results));
+    axios
+      .get(
+        `https://api.themoviedb.org/3/movie/popular?api_key=${KEY}&language=en-US&page=1`
+      )
+      .then((response) => setMovies(response.data.results));
   });
 
   return (
